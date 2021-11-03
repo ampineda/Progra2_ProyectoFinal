@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Mi_primer_reporte" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="84b92a62-ec5b-4ccd-9288-f5ee1e1f5db3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select c.* from CUSTOMER c where rownum<=100]]>
+	</queryString>
+	<field name="CUSID" class="java.math.BigDecimal"/>
+	<field name="CREDITCARDNUMBER" class="java.lang.String"/>
+	<field name="CREDITCARDTYPE" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="LNAME" class="java.lang.String"/>
+	<field name="PASSWORD" class="java.lang.String"/>
+	<field name="PHONENUMBER" class="java.lang.String"/>
+	<field name="STATUS" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="30" uuid="73f3eb21-c297-4597-a115-31c2cd2254ce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mi Primer Reporte]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="0fa90d1d-6cef-4b89-a396-b29902a5b8af"/>
+				<text><![CDATA[CUSID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="d89f3c11-da23-45f9-bfe8-aa303025c67c"/>
+				<text><![CDATA[FNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="92d2b556-1c1e-4e01-9299-558096c51213"/>
+				<text><![CDATA[LNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="a3fdddf2-8089-42e2-bfcb-f6f2fe2eab9d"/>
+				<text><![CDATA[PHONENUMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="53caca70-b33e-41ea-90a8-3c92ae04eb2f"/>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="100" height="20" uuid="2a5e3bfd-e043-4e56-8629-70519e9eff39"/>
+				<textFieldExpression><![CDATA[$F{CUSID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="100" y="0" width="100" height="20" uuid="4c8e07ae-595e-4175-9a71-3c9ff16fda13"/>
+				<textFieldExpression><![CDATA[$F{FNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="200" y="0" width="100" height="20" uuid="0d99f240-e182-4674-9757-5082e0afa799"/>
+				<textFieldExpression><![CDATA[$F{LNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="300" y="0" width="100" height="20" uuid="9acd22ff-5873-4ade-b394-0f066f2bdf73"/>
+				<textFieldExpression><![CDATA[$F{PHONENUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="400" y="0" width="100" height="20" uuid="7a6f7274-8a31-4857-9e9d-9bfe59c32aec"/>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
